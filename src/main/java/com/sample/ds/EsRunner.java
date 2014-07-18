@@ -56,12 +56,15 @@ import org.xbib.elasticsearch.river.jdbc.support.RiverContext;
 import org.xbib.elasticsearch.river.jdbc.support.RiverKeyValueStreamListener;
 import org.xbib.io.keyvalue.KeyValueStreamListener;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import antlr.collections.List;
 
 
 
 public class EsRunner {
 	private static final ESLogger logger = Loggers.getLogger(EsRunner.class.getSimpleName());
+	private static Logger logPrices = LoggerFactory.getLogger("prices");
 	public final String INDEX = "my_jdbc_river_index";
 
     public final String TYPE = "my_jdbc_river_type";
